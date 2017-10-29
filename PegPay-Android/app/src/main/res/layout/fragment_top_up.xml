@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pegasus.pegpay.TopUpActivityFragment"
+    tools:showIn="@layout/activity_top_up">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="368dp"
+        android:layout_height="551dp"
+        android:background="@drawable/main_bg"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/receive_payment"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_top_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:text="TOP UP"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/top_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/btn_phone_book"
+                        android:theme="@style/TextLabelStyled"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+                        <EditText
+                            android:id="@+id/txt_phone_number_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:hint="Enter Phone Number"
+                            android:textColor="#FFF"
+                            android:textSize="@dimen/form_text_size"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </RelativeLayout>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabelStyled"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+                    <EditText
+                        android:id="@+id/top_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint=" Enter Amount"
+                        android:textColor="#FFF"
+                        android:textSize="@dimen/form_text_size"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabelStyled"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+                    <EditText
+                        android:id="@+id/top_merchant_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="Enter Merchant ID"
+                        android:textColor="#FFF"
+                        android:textSize="@dimen/form_text_size"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/top_submit"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:background="#FFF"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:text="Submit"/>
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
